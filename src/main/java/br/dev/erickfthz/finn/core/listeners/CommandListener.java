@@ -3,7 +3,7 @@ package br.dev.erickfthz.finn.core.listeners;
 import br.dev.erickfthz.finn.core.FinnCore;
 import br.dev.erickfthz.finn.core.command.SlashCommand;
 import br.dev.erickfthz.finn.core.command.SlashSubcommand;
-import br.dev.erickfthz.finn.core.command.interaction.event.DynamicHandler;
+import br.dev.erickfthz.finn.core.listeners.events.DynamicHandler;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 
 public class CommandListener extends DynamicHandler<SlashCommandInteractionEvent> {

@@ -1,7 +1,7 @@
 package br.dev.erickfthz.finn.core;
 
 import br.dev.erickfthz.finn.core.command.CommandManager;
-import br.dev.erickfthz.finn.core.command.interaction.event.FinnDynamicEventHandler;
+import br.dev.erickfthz.finn.core.listeners.events.FinnDynamicEventHandler;
 import br.dev.erickfthz.finn.core.listeners.CommandListener;
 import lombok.Getter;
 import net.dv8tion.jda.api.JDA;

@@ -1,4 +1,4 @@
-package br.dev.erickfthz.finn.core.command.interaction.event;
+package br.dev.erickfthz.finn.core.listeners.events;
 
 import lombok.Getter;
 import net.dv8tion.jda.api.events.GenericEvent;

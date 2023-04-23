@@ -1,4 +1,4 @@
-package br.dev.erickfthz.finn.core.command.interaction.event;
+package br.dev.erickfthz.finn.core.listeners.events;
 
 @FunctionalInterface
 public interface IDynamicHandler<T> {

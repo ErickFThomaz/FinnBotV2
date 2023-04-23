@@ -1,7 +1,7 @@
-package br.dev.erickfthz.finn.core.command.interaction.event.handlers;
+package br.dev.erickfthz.finn.core.listeners.events.handlers;
 
-import br.dev.erickfthz.finn.core.command.interaction.event.DynamicHandler;
-import br.dev.erickfthz.finn.core.command.interaction.event.IDynamicHandler;
+import br.dev.erickfthz.finn.core.listeners.events.DynamicHandler;
+import br.dev.erickfthz.finn.core.listeners.events.IDynamicHandler;
 import lombok.EqualsAndHashCode;
 import net.dv8tion.jda.api.events.interaction.component.ButtonInteractionEvent;
 import net.dv8tion.jda.api.interactions.components.buttons.Button;
