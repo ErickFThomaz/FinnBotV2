@@ -50,7 +50,7 @@ public class FinnCore {
     }
 
     private JDA createBot() {
-        JDABuilder builder = JDABuilder.create("NzY2NzY3MDY4NDY3OTUzNjk2.GQ00gH.hYyIBaDhcPXPGFL3Vcmw9ckPWZ9CRqZd9jwHAo",
+        JDABuilder builder = JDABuilder.create("",
                         GatewayIntent.MESSAGE_CONTENT,
                         GatewayIntent.GUILD_PRESENCES,
                         GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_MESSAGE_REACTIONS,
