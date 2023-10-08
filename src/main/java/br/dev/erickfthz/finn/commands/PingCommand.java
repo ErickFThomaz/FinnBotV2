@@ -1,8 +1,8 @@
 package br.dev.erickfthz.finn.commands;
 
 import br.dev.erickfthz.finn.core.command.SlashCommand;
+import br.dev.erickfthz.finn.core.command.SlashCommandEvent;
 import br.dev.erickfthz.finn.core.command.annotations.RegisterCommand;
-import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 
 @RegisterCommand
 public class PingCommand extends SlashCommand {
@@ -12,10 +12,10 @@ public class PingCommand extends SlashCommand {
     }
 
     @Override
-    public void execute(SlashCommandInteractionEvent event) {
+    public void execute(SlashCommandEvent event) {
 
 
-        event.replyFormat("Pong! %s ms", event.getJDA().getGatewayPing())
+        event.reply("Pong! %s ms", event.getJda().getGatewayPing())
                 .setEphemeral(true)
                 .queue();
 

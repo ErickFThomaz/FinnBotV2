@@ -6,14 +6,30 @@ plugins {
 group = 'br.dev.erickfthz.finn'
 version = '0.0.1'
 
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+compileJava.options.encoding = 'UTF-8'
+
 repositories {
+    maven{
+        url 'https://jitpack.io'
+    }
     mavenCentral()
 }
 
 dependencies {
-    implementation 'net.dv8tion:JDA:5.0.0-beta.8'
 
-    implementation 'ch.qos.logback:logback-classic:1.4.6'
+    implementation 'net.dv8tion:JDA:5.0.0-beta.13'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'com.github.walkyst:lavaplayer-fork:1.4.3'
+    implementation 'io.lindstrom:m3u8-parser:0.24'
+
+    implementation 'com.github.Chew.JDA-Chewtils:jda-chewtils:a86d4dedfa'
+
+    implementation 'ch.qos.logback:logback-classic:1.4.7'
     implementation 'org.reflections:reflections:0.10.2'
 
     compileOnly "org.projectlombok:lombok:1.18.26"

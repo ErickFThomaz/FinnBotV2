@@ -1,9 +1,9 @@
 package br.dev.erickfthz.finn.core.command;
 
 import lombok.Getter;
-import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -15,6 +15,7 @@ public abstract class SlashCommand {
     private final String name;
     private final String description;
     private final List<OptionData> options;
+    @Getter
     private final Map<String, SlashSubcommand> subcommands;
 
     public SlashCommand(String name, String description) {
@@ -25,10 +26,6 @@ public abstract class SlashCommand {
     }
 
 
-    public Map<String, SlashSubcommand> getSubcommands() {
-        return subcommands;
-    }
-
     public void addSubcommand(SlashSubcommand subcommand) {
         subcommands.put(subcommand.getName(), subcommand);
     }
@@ -37,6 +34,6 @@ public abstract class SlashCommand {
         options.add(option);
     }
 
-    public abstract void execute(SlashCommandInteractionEvent event);
+    public abstract void execute(SlashCommandEvent event) throws IOException;
 
 }

@@ -2,6 +2,7 @@ package br.dev.erickfthz.finn.core.listeners;
 
 import br.dev.erickfthz.finn.core.FinnCore;
 import br.dev.erickfthz.finn.core.command.SlashCommand;
+import br.dev.erickfthz.finn.core.command.SlashCommandEvent;
 import br.dev.erickfthz.finn.core.command.SlashSubcommand;
 import br.dev.erickfthz.finn.core.listeners.events.DynamicHandler;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -40,7 +41,7 @@ public class CommandListener extends DynamicHandler<SlashCommandInteractionEvent
             }
         } else {
             try {
-                command.execute(event);
+                command.execute(new SlashCommandEvent(event));
             } catch (Exception e) {
                 event.reply("An error occurred: " + e.getMessage()).setEphemeral(true).queue();
             }
